@@ -1,5 +1,7 @@
-﻿using HotelBookingSystem.Api.Models;
+﻿using HotelBookingSystem.Api.Data;
+using HotelBookingSystem.Api.Models;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 
 namespace HotelBookingSystem.Api.Controllers;
 
@@ -7,27 +9,32 @@ namespace HotelBookingSystem.Api.Controllers;
 [Route("api/[controller]")]
 public class RoomsController : ControllerBase
 {
-    private static readonly List<Room> _rooms = new();
-    private static int _nextId = 1;
-    
+    private readonly AppDbContext _context;
+
+    public RoomsController(AppDbContext context)
+    {
+        _context = context;
+    }
+
+    [HttpGet]
+    public async Task<ActionResult<IEnumerable<Room>>> GetAllRooms()
+    {
+        var rooms = await _context.Rooms.ToListAsync();
+        return Ok(rooms);
+    }
+
     [HttpGet("{id:int}")]
     public async Task<ActionResult<Room>> GetRoomById(int id)
     {
-        var room = _rooms.FirstOrDefault(r => r.Id == id);
+        var room = await _context.Rooms.FindAsync(id);
         return room is null ? NotFound() : Ok(room);
     }
 
     [HttpPost]
     public async Task<ActionResult<Room>> CreateRoom(Room newRoom)
     {
-        var created = newRoom with { Id = _nextId++ };
-        _rooms.Add(created);
-        return CreatedAtAction(nameof(GetRoomById), new { id = created.Id }, created);
-    }
-
-    [HttpGet]
-    public async Task<ActionResult<IEnumerable<Room>>> GetAllRooms()
-    {
-        return Ok(_rooms);
+        _context.Rooms.Add(newRoom);
+        await _context.SaveChangesAsync();
+        return CreatedAtAction(nameof(GetRoomById), new { id = newRoom.Id }, newRoom);
     }
 }
