@@ -10,13 +10,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a3b1c83c-085c-4a53-b78d-2f7245b95a82" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Models/Contracts/CreateRoomRequest.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Models/Contracts/UpdateRoomRequest.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.HotelBookingSystem.Api.dir/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.HotelBookingSystem.Api.dir/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Controllers/RoomsController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/RoomsController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Models/Room.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Models/Room.cs" afterDir="false" />
-    </list>
+    <list default="true" id="a3b1c83c-085c-4a53-b78d-2f7245b95a82" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -172,7 +166,7 @@
       <workItem from="1764781060795" duration="39000" />
       <workItem from="1765013790089" duration="881000" />
       <workItem from="1765014767414" duration="6008000" />
-      <workItem from="1765109771419" duration="1776000" />
+      <workItem from="1765109771419" duration="3610000" />
     </task>
     <task id="LOCAL-00001" summary="Delete Trash">
       <option name="closed" value="true" />
@@ -206,7 +200,15 @@
       <option name="project" value="LOCAL" />
       <updated>1765037671061</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="```&#10;feat: implement create, update, and delete room endpoints (issue #1)&#10;```">
+      <option name="closed" value="true" />
+      <created>1765111589784</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1765111589784</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -231,7 +233,8 @@
     <MESSAGE value="Тест" />
     <MESSAGE value="Add Entity Framework Core with PostgreSQL support and update controllers." />
     <MESSAGE value="1" />
-    <option name="LAST_COMMIT_MESSAGE" value="1" />
+    <MESSAGE value="```&#10;feat: implement create, update, and delete room endpoints (issue #1)&#10;```" />
+    <option name="LAST_COMMIT_MESSAGE" value="```&#10;feat: implement create, update, and delete room endpoints (issue #1)&#10;```" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
