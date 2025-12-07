@@ -1,5 +1,8 @@
-﻿using HotelBookingSystem.Api.Models;
+﻿using HotelBookingSystem.Api.Data;
+using HotelBookingSystem.Api.Models;
+using HotelBookingSystem.Api.Models.Contracts;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 
 namespace HotelBookingSystem.Api.Controllers;
 
@@ -7,27 +10,71 @@ namespace HotelBookingSystem.Api.Controllers;
 [Route("api/[controller]")]
 public class RoomsController : ControllerBase
 {
-    private static readonly List<Room> _rooms = new();
-    private static int _nextId = 1;
-    
-    [HttpGet("{id:int}")]
-    public async Task<ActionResult<Room>> GetRoomById(int id)
-    {
-        var room = _rooms.FirstOrDefault(r => r.Id == id);
-        return room is null ? NotFound() : Ok(room);
-    }
+    private readonly AppDbContext _context;
 
-    [HttpPost]
-    public async Task<ActionResult<Room>> CreateRoom(Room newRoom)
+    public RoomsController(AppDbContext context)
     {
-        var created = newRoom with { Id = _nextId++ };
-        _rooms.Add(created);
-        return CreatedAtAction(nameof(GetRoomById), new { id = created.Id }, created);
+        _context = context;
     }
 
     [HttpGet]
     public async Task<ActionResult<IEnumerable<Room>>> GetAllRooms()
     {
-        return Ok(_rooms);
+        var rooms = await _context.Rooms.ToListAsync();
+        return Ok(rooms);
+    }
+
+    [HttpGet("{id:int}")]
+    public async Task<ActionResult<Room>> GetRoomById(int id)
+    {
+        var room = await _context.Rooms.FindAsync(id);
+        return room is null ? NotFound() : Ok(room);
+    }
+
+    [HttpPost]
+    public async Task<ActionResult<Room>> CreateRoom(CreateRoomRequest request)
+    {
+        var roomEntity = new Room
+        {
+            Name = request.Name,
+            Status = request.Status
+        };
+        
+        _context.Rooms.Add(roomEntity);
+        await _context.SaveChangesAsync();
+        
+        return CreatedAtAction(nameof(GetRoomById), new { id = roomEntity.Id }, roomEntity);
+    }
+
+    [HttpPut("{id:int}")]
+    public async Task<IActionResult> UpdateRoom(int id, UpdateRoomRequest request)
+    {
+        var roomInDb = await _context.Rooms.FindAsync(id);
+
+        if (roomInDb is null)
+        {
+            return NotFound();
+        }
+        
+        roomInDb.Name = request.Name;
+        roomInDb.Status = request.Status;
+
+        await _context.SaveChangesAsync();
+        return  NoContent();
+    }
+
+    [HttpDelete("{id:int}")]
+    public async Task<IActionResult> DeleteRoom(int id)
+    {
+        var room = await _context.Rooms.FindAsync(id);
+
+        if (room is null)
+        {
+            return  NotFound();
+        }
+        
+        _context.Rooms.Remove(room);
+        await _context.SaveChangesAsync();
+        return NoContent();
     }
 }

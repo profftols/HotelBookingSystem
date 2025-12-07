@@ -1,3 +1,8 @@
 ﻿namespace HotelBookingSystem.Api.Models;
 
-public record Room(int Id, string Name, RoomStatus Status);
+public class Room
+{
+    public int Id { get; set; }
+    public string Name { get; set; } = string.Empty;
+    public RoomStatus Status { get; set; }
+}
