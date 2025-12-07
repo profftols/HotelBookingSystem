@@ -11,12 +11,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a3b1c83c-085c-4a53-b78d-2f7245b95a82" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Data/AppDbContext.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Models/Contracts/CreateRoomRequest.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Models/Contracts/UpdateRoomRequest.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.HotelBookingSystem.Api.dir/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.HotelBookingSystem.Api.dir/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Controllers/RoomsController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/RoomsController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HotelBookingSystem.Api.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/HotelBookingSystem.Api.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/appsettings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Models/Room.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Models/Room.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,6 +59,8 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/.idea/config/applicationhost.config" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Data/AppDbContext.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Models/Contracts/CreateRoomRequest.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Models/Contracts/UpdateRoomRequest.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="ProjectColorInfo">{
@@ -170,7 +171,8 @@
       <workItem from="1764775926961" duration="1236000" />
       <workItem from="1764781060795" duration="39000" />
       <workItem from="1765013790089" duration="881000" />
-      <workItem from="1765014767414" duration="5939000" />
+      <workItem from="1765014767414" duration="6008000" />
+      <workItem from="1765109771419" duration="1776000" />
     </task>
     <task id="LOCAL-00001" summary="Delete Trash">
       <option name="closed" value="true" />
@@ -188,7 +190,23 @@
       <option name="project" value="LOCAL" />
       <updated>1762861688771</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Add Entity Framework Core with PostgreSQL support and update controllers.">
+      <option name="closed" value="true" />
+      <created>1765037662634</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1765037662634</updated>
+    </task>
+    <task id="LOCAL-00004" summary="1">
+      <option name="closed" value="true" />
+      <created>1765037671061</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1765037671061</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -211,7 +229,9 @@
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
     <MESSAGE value="Delete Trash" />
     <MESSAGE value="Тест" />
-    <option name="LAST_COMMIT_MESSAGE" value="Тест" />
+    <MESSAGE value="Add Entity Framework Core with PostgreSQL support and update controllers." />
+    <MESSAGE value="1" />
+    <option name="LAST_COMMIT_MESSAGE" value="1" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
