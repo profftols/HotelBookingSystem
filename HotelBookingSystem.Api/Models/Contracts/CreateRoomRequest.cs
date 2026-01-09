@@ -1,3 +1,12 @@
-﻿namespace HotelBookingSystem.Api.Models.Contracts;
+﻿using System.ComponentModel.DataAnnotations;
 
-public record CreateRoomRequest(string Name, RoomStatus Status);
+namespace HotelBookingSystem.Api.Models.Contracts;
+
+public record CreateRoomRequest(
+    [Required]
+    [StringLength(100)]
+    string Name,
+    
+    [Required]
+    RoomStatus Status
+    );

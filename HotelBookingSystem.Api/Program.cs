@@ -1,5 +1,6 @@
 using System.Text.Json.Serialization;
 using HotelBookingSystem.Api.Data;
+using HotelBookingSystem.Api.Services;
 using Microsoft.EntityFrameworkCore;
 
 
@@ -13,6 +14,7 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddDbContext<AppDbContext>(options =>
     options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection")));
+builder.Services.AddScoped<IRoomService, RoomService>();
 
 var app = builder.Build();
 

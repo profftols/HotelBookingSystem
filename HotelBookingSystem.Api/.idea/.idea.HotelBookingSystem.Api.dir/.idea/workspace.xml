@@ -41,6 +41,13 @@
         &quot;number&quot;: 3
       },
       &quot;lastSeen&quot;: 1763217055763
+    },
+    {
+      &quot;id&quot;: {
+        &quot;id&quot;: &quot;PR_kwDOQMQNx863iMn0&quot;,
+        &quot;number&quot;: 4
+      },
+      &quot;lastSeen&quot;: 1765119851950
     }
   ]
 }</component>
@@ -48,6 +55,16 @@
   &quot;selectedUrlAndAccountId&quot;: {
     &quot;url&quot;: &quot;https://github.com/profftols/HotelBookingSystem.git&quot;,
     &quot;accountId&quot;: &quot;e7fae513-da44-47f0-9951-ac0a0f1cb6ce&quot;
+  },
+  &quot;recentNewPullRequestHead&quot;: {
+    &quot;server&quot;: {
+      &quot;useHttp&quot;: false,
+      &quot;host&quot;: &quot;github.com&quot;,
+      &quot;port&quot;: null,
+      &quot;suffix&quot;: null
+    },
+    &quot;owner&quot;: &quot;profftols&quot;,
+    &quot;repository&quot;: &quot;HotelBookingSystem&quot;
   }
 }</component>
   <component name="HighlightingSettingsPerFile">
@@ -55,6 +72,8 @@
     <setting file="file://$PROJECT_DIR$/Data/AppDbContext.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Models/Contracts/CreateRoomRequest.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Models/Contracts/UpdateRoomRequest.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Services/IRoomService.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Services/RoomService.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="ProjectColorInfo">{
@@ -82,7 +101,7 @@
     &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;deletionFromPopupRequiresConfirmation&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;feature/create-room-endpoint&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;#5 on feature/create-room-endpoint&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
@@ -166,7 +185,8 @@
       <workItem from="1764781060795" duration="39000" />
       <workItem from="1765013790089" duration="881000" />
       <workItem from="1765014767414" duration="6008000" />
-      <workItem from="1765109771419" duration="3610000" />
+      <workItem from="1765109771419" duration="4523000" />
+      <workItem from="1765715170599" duration="3642000" />
     </task>
     <task id="LOCAL-00001" summary="Delete Trash">
       <option name="closed" value="true" />
@@ -208,7 +228,23 @@
       <option name="project" value="LOCAL" />
       <updated>1765111589784</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="1">
+      <option name="closed" value="true" />
+      <created>1765119414895</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1765119414895</updated>
+    </task>
+    <task id="LOCAL-00007" summary="```plaintext&#10;feat: add room service and update room-related models (issue #1)&#10;&#10;- Added IRoomService interface and its implementation in RoomService.&#10;- Updated CreateRoomRequest and UpdateRoomRequest to include data&#10;  annotations for validation.&#10;- Updated RoomsController to use the new IRoomService for room&#10;  operations.&#10;- Refactored room creation, update, and deletion logic to use the&#10;  service layer.&#10;```">
+      <option name="closed" value="true" />
+      <created>1765719584066</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1765719584066</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -221,7 +257,15 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ID_WIDTH">
+                <map>
+                  <entry key="Table.Default.Author.ColumnIdWidth" value="57" />
+                  <entry key="Table.Default.Date.ColumnIdWidth" value="57" />
+                  <entry key="Table.GitHub.CommitStatus.ColumnIdWidth" value="57" />
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
@@ -232,9 +276,10 @@
     <MESSAGE value="Delete Trash" />
     <MESSAGE value="Тест" />
     <MESSAGE value="Add Entity Framework Core with PostgreSQL support and update controllers." />
-    <MESSAGE value="1" />
     <MESSAGE value="```&#10;feat: implement create, update, and delete room endpoints (issue #1)&#10;```" />
-    <option name="LAST_COMMIT_MESSAGE" value="```&#10;feat: implement create, update, and delete room endpoints (issue #1)&#10;```" />
+    <MESSAGE value="1" />
+    <MESSAGE value="```plaintext&#10;feat: add room service and update room-related models (issue #1)&#10;&#10;- Added IRoomService interface and its implementation in RoomService.&#10;- Updated CreateRoomRequest and UpdateRoomRequest to include data&#10;  annotations for validation.&#10;- Updated RoomsController to use the new IRoomService for room&#10;  operations.&#10;- Refactored room creation, update, and deletion logic to use the&#10;  service layer.&#10;```" />
+    <option name="LAST_COMMIT_MESSAGE" value="```plaintext&#10;feat: add room service and update room-related models (issue #1)&#10;&#10;- Added IRoomService interface and its implementation in RoomService.&#10;- Updated CreateRoomRequest and UpdateRoomRequest to include data&#10;  annotations for validation.&#10;- Updated RoomsController to use the new IRoomService for room&#10;  operations.&#10;- Refactored room creation, update, and deletion logic to use the&#10;  service layer.&#10;```" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
