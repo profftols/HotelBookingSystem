@@ -45,6 +45,7 @@ public class RoomService : IRoomService
         {
             room.Name = request.Name;
             room.Status = request.Status;
+            await _context.SaveChangesAsync();
         }
     }
 
